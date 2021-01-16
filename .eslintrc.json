@@ -1,16 +1,30 @@
 {
-    "eslintConfig": {
-      "extends": ["react-app", "shared-config"],
-      "rules": {
-        "additional-rule": "warn"
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "extends": [
+      "plugin:react/recommended",
+      "plugin:@typescript-eslint/recommended",
+      "prettier"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
       },
-      "overrides": [
-        {
-          "files": ["**/*.ts?(x)"],
-          "rules": {
-            "additional-typescript-only-rule": "warn"
-          }
-        }
-      ]
+      "ecmaVersion": 12,
+      "sourceType": "module"
+    },
+    "plugins": ["react", "@typescript-eslint", "prettier"],
+    "rules": {
+      "prettier/prettier": "off",
+      "react/prop-types": "off"
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
     }
   }
+  
