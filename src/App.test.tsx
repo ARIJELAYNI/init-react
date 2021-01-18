@@ -6,3 +6,7 @@ it("renders welcome message", () => {
   render(<App />);
   expect(screen.getByText("Learn React")).toBeInTheDocument();
 });
+
+it("test", () => {
+  expect(1).not.toBe(3);
+});
